@@ -1,69 +1,84 @@
-# Welcome to your Lovable project
+# Joel Calm Portfolio
 
-## Project info
+**Computational Mathematics & Data Analytics Student**  
+*Machine Learning, AI, and Data Science Enthusiast*
 
-**URL**: https://lovable.dev/projects/22de9e43-e9b9-4d7c-ac32-60653a04310e
+---
 
-## How can I edit this code?
+## Hero
 
-There are several ways of editing your application.
+<div align="center">
+  <img src="/profilepic.jpg" alt="Profile Picture" width="128" height="128" style="border-radius: 50%; border: 4px solid rgba(128,90,244,0.3);" />
+</div>
 
-**Use Lovable**
+**Joel Calm**  
+Computational Mathematics & Data Analytics Student
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/22de9e43-e9b9-4d7c-ac32-60653a04310e) and start prompting.
+[GitHub](https://github.com/joelcalm) • [LinkedIn](https://www.linkedin.com/in/joel-calm/) • [Email](mailto:joelcalm44@gmail.com)
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## About Me
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Driven by a relentless pursuit of learning and self-improvement, I am a Computational Mathematics and Data Analytics student with a strong focus on Machine Learning, Artificial Intelligence, and Data Science. I specialize in predictive modeling, deep learning, and data preprocessing to solve real-world challenges.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## Projects
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### MangoVison
+Developed an AI-driven solution to automate garment classification and attribute extraction for fashion designers and photographers. Utilized fine-tuned CLIP embeddings, cosine similarity, and machine learning to cluster similar garments and assign attributes via a majority voting system. Created a Streamlit interactive prototype to streamline fashion data management and enhance workflow automation.  
+**Technologies:** AI, CLIP, Streamlit, Python, Machine Learning  
+**Link:** [View on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7267879367807021057/)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Formula 1 Race Outcome Prediction
+Built a robust machine learning model to predict Formula 1 race outcomes, including winners and driver performance classifications. Leveraged XGBoost, Random Forest, SVM, and Logistic Regression with extensive feature extraction and hyperparameter tuning on historical race data (1950–2024), achieving significant predictive performance.  
+**Technologies:** Python, ML, XGBoost, Data Analysis, Pandas  
+**Link:** [View on GitHub](https://github.com/joelcalm/Formula1Prediction)
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Zara ... Kind of
+Developed a web application that recommends similar fashion products to users. Built with a React frontend and FastAPI backend, the system utilizes a pre-trained ResNet CNN model implemented in TensorFlow and Keras to analyze product images and suggest comparable items.  
+**Technologies:** React, FastAPI, TensorFlow, Keras, REST API  
+**Link:** [View on Devpost](https://devpost.com/software/zara-kind-of?ref_content=user-portfolio&ref_feature=in_progress)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### BrainRepo.es
+Created an app that automatically generates and sends summaries when new videos are added to a YouTube playlist. Built with FastAPI, it integrates the YouTube Data API for transcript extraction and the DeepSeek API for AI-powered summary generation, effectively automating content summarization.  
+**Technologies:** FastAPI, YouTube Data API, DeepSeek API, Python, Automation  
+**Link:** [View on GitHub](https://github.com/joelcalm/brainrepo-backend)
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Experience
 
-**Use GitHub Codespaces**
+### Audio AI/ML Engineer Intern  
+**AudioStack** • Dec 2024 – Current  
+- Developed AI-driven audio processing software.  
+- Implemented testing frameworks to ensure system reliability and efficiency.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Data Scientist  
+**Tavil** • Aug 2023 – Aug 2024  
+- Validated CNN models for image classification.  
+- Optimized model performance through hyperparameter tuning and feature engineering.
 
-## What technologies are used for this project?
+### Private Maths and Physics Tutor  
+**Freelance** • 2020 – 2023
 
-This project is built with .
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Skills
 
-## How can I deploy this project?
+**Programming Languages:** Python, C++, C  
+**Data Analysis & Visualization:** Pandas, Numpy, Matplotlib, Scikit-learn  
+**Machine Learning & Deep Learning:** Pytorch, TensorFlow, ML, FastAPI  
+**Database & Cloud:** SQL, NoSQL, Firebase, AWS  
+**DevOps & Tools:** Docker, Git
 
-Simply open [Lovable](https://lovable.dev/projects/22de9e43-e9b9-4d7c-ac32-60653a04310e) and click on Share -> Publish.
+---
 
-## I want to use a custom domain - is that possible?
+## Contact
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- **Email:** [joelcalm44@gmail.com](mailto:joelcalm44@gmail.com)  
+- **Phone:** (+34) 684290506  
+- **Location:** Olot, Spain  
+- **GitHub:** [github.com/joelcalm](https://github.com/joelcalm)  
+- **LinkedIn:** [linkedin.com/in/joel-calm](https://www.linkedin.com/in/joel-calm/)

@@ -19,41 +19,57 @@ const Index = () => {
     {
       title: "MangoVison",
       description:
-        "AI-driven solution for automating garment classification. 2nd Place Datathon FME 2024.",
+        "Developed an AI-driven solution to automate garment classification and attribute extraction for fashion designers and photographers. Utilized fine-tuned CLIP embeddings, cosine similarity, and machine learning to cluster similar garments and assign attributes via a majority voting system. Created a Streamlit interactive prototype to streamline fashion data management and enhance workflow automation.",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7267879367807021057/",
-      tech: ["AI", "CLIP", "Streamlit"],
+      tech: ["AI", "CLIP", "Streamlit", "Python", "Machine Learning"],
     },
     {
-      title: "Formula 1 Race Prediction",
+      title: "Formula 1 Race Outcome Prediction",
       description:
-        "ML model to predict F1 race outcomes using XGBoost and Random Forest.",
+        "Built a robust machine learning model to predict Formula 1 race outcomes, including winners and driver performance classifications. Leveraged XGBoost, Random Forest, SVM, and Logistic Regression with extensive feature extraction and hyperparameter tuning on historical race data (1950–2024), achieving significant predictive performance.",
       link: "https://github.com/joelcalm/Formula1Prediction",
-      tech: ["Python", "ML", "Data Analysis"],
+      tech: ["Python", "ML", "XGBoost", "Data Analysis", "Pandas"],
     },
     {
       title: "Zara ... Kind of",
       description:
-        "Fashion product recommendation system using ResNet CNN model.",
-      link: "https://devpost.com/software/zara-kind-of",
-      tech: ["React", "FastAPI", "TensorFlow"],
+        "Developed a web application that recommends similar fashion products to users. Built with a React frontend and FastAPI backend, the system utilizes a pre-trained ResNet CNN model implemented in TensorFlow and Keras to analyze product images and suggest comparable items.",
+      link: "https://devpost.com/software/zara-kind-of?ref_content=user-portfolio&ref_feature=in_progress",
+      tech: ["React", "FastAPI", "TensorFlow", "Keras", "REST API"],
+    },
+    {
+      title: "BrainRepo.es",
+      description:
+        "Created an app that automatically generates and sends summaries when new videos are added to a YouTube playlist. Built with FastAPI, it integrates the YouTube Data API for transcript extraction and the DeepSeek API for AI-powered summary generation, effectively automating content summarization.",
+      link: "https://github.com/joelcalm/brainrepo-backend",
+      tech: ["FastAPI", "YouTube Data API", "DeepSeek API", "Python", "Automation"],
     },
   ];
 
   const skills = [
-    "Machine Learning",
-    "Deep Learning",
     "Python",
-    "Data Analysis",
-    "React",
+    "C++",
+    "C",
+    "Pandas",
+    "Numpy",
+    "Matplotlib",
+    "Scikit-learn",
+    "Pytorch",
+    "TensorFlow",
     "FastAPI",
     "SQL",
-    "TensorFlow",
+    "NoSQL",
+    "Firebase",
+    "AWS",
+    "Docker",
+    "Git",
+  
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-purple-900 to-black">
+    <div className="min-h-[80vh] bg-gradient-to-b from-black via-purple-900 to-black">
       {/* Hero Section */}
-      <section className="section-padding min-h-screen flex items-center justify-center relative">
+      <section className="section-padding min-h-[80vh] flex items-center justify-center relative">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -63,12 +79,12 @@ const Index = () => {
           >
             <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-purple-400/30 mb-6">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                src="/profilepic.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
               Joel Calm
             </h1>
             <p className="text-xl md:text-2xl text-purple-200 max-w-2xl mx-auto">
@@ -136,7 +152,7 @@ const Index = () => {
             <Code className="text-purple-200" size={24} />
             <h2 className="text-3xl font-bold text-white">Projects</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -264,10 +280,6 @@ const Index = () => {
               <Phone size={20} />
               <span>(+34) 684290506</span>
             </a>
-            <div className="flex items-center space-x-2 text-purple-200">
-              <MapPin size={20} />
-              <span>Olot, Spain</span>
-            </div>
           </div>
         </motion.div>
       </section>
