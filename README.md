@@ -5,19 +5,6 @@
 
 ---
 
-## Hero
-
-<div align="center">
-  <img src="/profilepic.jpg" alt="Profile Picture" width="128" height="128" style="border-radius: 50%; border: 4px solid rgba(128,90,244,0.3);" />
-</div>
-
-**Joel Calm**  
-Computational Mathematics & Data Analytics Student
-
-[GitHub](https://github.com/joelcalm) • [LinkedIn](https://www.linkedin.com/in/joel-calm/) • [Email](mailto:joelcalm44@gmail.com)
-
----
-
 ## About Me
 
 Driven by a relentless pursuit of learning and self-improvement, I am a Computational Mathematics and Data Analytics student with a strong focus on Machine Learning, Artificial Intelligence, and Data Science. I specialize in predictive modeling, deep learning, and data preprocessing to solve real-world challenges.
@@ -79,6 +66,5 @@ Created an app that automatically generates and sends summaries when new videos 
 
 - **Email:** [joelcalm44@gmail.com](mailto:joelcalm44@gmail.com)  
 - **Phone:** (+34) 684290506  
-- **Location:** Olot, Spain  
 - **GitHub:** [github.com/joelcalm](https://github.com/joelcalm)  
 - **LinkedIn:** [linkedin.com/in/joel-calm](https://www.linkedin.com/in/joel-calm/)
