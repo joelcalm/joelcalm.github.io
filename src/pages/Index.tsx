@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -17,18 +16,44 @@ import {
 const Index = () => {
   const projects = [
     {
-      title: "MangoVison",
+      title: "Image Captioning with Deep Learning",
       description:
-        "Developed an AI-driven solution to automate garment classification and attribute extraction for fashion designers and photographers. Utilized fine-tuned CLIP embeddings, cosine similarity, and machine learning to cluster similar garments and assign attributes via a majority voting system. Created a Streamlit interactive prototype to streamline fashion data management and enhance workflow automation.",
+        "Developed an automatic image captioning system using encoder-decoder architectures that combine CNNs for visual feature extraction with RNNs for text generation. Implemented attention mechanisms for improved spatial focus and trained models on the Flickr8k dataset. Achieved competitive performance using BLEU and METEOR metrics with beam search optimization for caption quality.",
+      link: "https://github.com/joelcalm/ImageCaptioning",
+      tech: ["Deep Learning", "CNN", "RNN", "Attention", "NLP"],
+      date: "05/2025",
+    },
+    {
+      title: "SkyGrouper - Hackathon UPC 2025 (Skyscanner Challenge)",
+      description:
+        "Challenge: building an app that helps people coming from different locations agree on the perfect holiday destination. Our solution, SkyGrouper, uses an AI Agent running on an MCP-based server integrated with the Skyscanner API to suggest optimal destinations and flight itineraries for multi-origin groups.",
+      link: "https://github.com/jc2409/SkyGrouper-Agent?tab=readme-ov-file",
+      tech: ["AI Agent", "API Integration", "Node.js", "Travel", "Hackathon"],
+      date: "11/2024",
+    },
+    {
+      title: "MangoVison - 2n place Datathon FME 2024 (MANGO Challenge)",
+      description:
+        "Developed an AI-driven solution to automate garment classification and attribute extraction for fashion designers and photographers. Leveraged fine-tuned CLIP embeddings, cosine similarity, and machine learning to cluster similar garments and assign attributes via a majority voting system. Built a Streamlit interactive prototype to streamline fashion data management, improving efficiency and workflow automation.",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7267879367807021057/",
-      tech: ["AI", "CLIP", "Streamlit", "Python", "Machine Learning"],
+      tech: ["AI", "CLIP", "Streamlit", "Python", "Datathon"],
+      date: "11/2024",
+    },
+    {
+      title: "BrainRepo",
+      description:
+        "Developed an AI-powered web application that enhances learning retention from YouTube content by delivering personalized weekly recaps with key insights and lessons. Implemented a multi-agent system where specialized agents generate video summaries and create curated learning digests. Leveraged NLP and automated workflow orchestration to extract valuable takeaways from users' viewing history, transforming passive consumption into structured knowledge retention.",
+      link: "https://brainrepo.es",
+      tech: ["AI", "NLP", "Automation", "Web App", "YouTube API"],
+      date: "2024",
     },
     {
       title: "Formula 1 Race Outcome Prediction",
       description:
-        "Built a robust machine learning model to predict Formula 1 race outcomes, including winners and driver performance classifications. Leveraged XGBoost, Random Forest, SVM, and Logistic Regression with extensive feature extraction and hyperparameter tuning on historical race data (1950–2024), achieving significant predictive performance.",
+        "Developed a machine learning model to predict Formula 1 race outcomes, including winners and driver performance classifications. Leveraged XGBoost, Random Forest, SVM, and Logistic Regression, performing feature extraction and hyperparameter tuning to improve accuracy. Analyzed historical race data (1950–2024) to train and evaluate models, achieving significant predictive performance.",
       link: "https://github.com/joelcalm/Formula1Prediction",
-      tech: ["Python", "ML", "XGBoost", "Data Analysis", "Pandas"],
+      tech: ["Machine Learning", "XGBoost", "Data Analysis", "Python", "Sports Analytics"],
+      date: "04/2025",
     },
     {
       title: "Zara ... Kind of",
@@ -36,20 +61,15 @@ const Index = () => {
         "Developed a web application that recommends similar fashion products to users. Built with a React frontend and FastAPI backend, the system utilizes a pre-trained ResNet CNN model implemented in TensorFlow and Keras to analyze product images and suggest comparable items.",
       link: "https://devpost.com/software/zara-kind-of?ref_content=user-portfolio&ref_feature=in_progress",
       tech: ["React", "FastAPI", "TensorFlow", "Keras", "REST API"],
-    },
-    {
-      title: "BrainRepo.es",
-      description:
-        "Created an app that automatically generates and sends summaries when new videos are added to a YouTube playlist. Built with FastAPI, it integrates the YouTube Data API for transcript extraction and the DeepSeek API for AI-powered summary generation, effectively automating content summarization.",
-      link: "https://github.com/joelcalm/brainrepo-backend",
-      tech: ["FastAPI", "YouTube Data API", "DeepSeek API", "Python", "Automation"],
+      date: "2023",
     },
   ];
 
   const skills = [
     "Python",
-    "C++",
-    "C",
+    "AI Agent",
+    "AI Automation",
+    "API Integration",
     "Pandas",
     "Numpy",
     "Matplotlib",
@@ -57,6 +77,8 @@ const Index = () => {
     "Pytorch",
     "TensorFlow",
     "FastAPI",
+    "C++",
+    "C",
     "SQL",
     "NoSQL",
     "Firebase",
@@ -65,6 +87,9 @@ const Index = () => {
     "Git",
   
   ];
+
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const displayedProjects = showAllProjects ? projects : projects.slice(0, 4);
 
   return (
     <div className="min-h-[80vh] bg-gradient-to-b from-black via-purple-900 to-black">
@@ -77,18 +102,18 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-purple-400/30 mb-6">
+            <div className="mx-auto w-40 h-40 rounded-full overflow-hidden border-4 border-purple-400/30 mb-6">
               <img
                 src="/profilepic.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
+            <h1 className="text-3xl md:text-4xl font-bold text-white">
               Joel Calm
             </h1>
             <p className="text-xl md:text-2xl text-purple-200 max-w-2xl mx-auto">
-              Computational Mathematics & Data Analytics Student
+               Learning how to make machines understand and humans benefit
             </p>
             <div className="flex justify-center space-x-6 pt-6">
               <a
@@ -153,7 +178,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-white">Projects</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
+            {displayedProjects.map((project, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -183,9 +208,22 @@ const Index = () => {
                 >
                   View Project <ExternalLink size={16} className="ml-1" />
                 </a>
+                {project.date && (
+                  <div className="text-xs text-purple-300 mt-2">{project.date}</div>
+                )}
               </motion.div>
             ))}
           </div>
+          {projects.length > 4 && (
+            <div className="flex justify-center mt-8">
+              <button
+                onClick={() => setShowAllProjects((prev) => !prev)}
+                className="px-6 py-2 rounded-full bg-purple-700 text-white hover:bg-purple-800 transition-colors font-semibold shadow-lg"
+              >
+                {showAllProjects ? "Show Less" : "Show More"}
+              </button>
+            </div>
+          )}
         </motion.div>
       </section>
 
@@ -206,7 +244,7 @@ const Index = () => {
               <h3 className="text-xl font-semibold text-white">
                 Audio AI/ML Engineer Intern
               </h3>
-              <p className="text-purple-200">AudioStack • Dec 2024 – Current</p>
+              <p className="text-purple-200">AudioStack • Dec 2024 – May 2025</p>
               <ul className="mt-4 text-purple-200 list-disc list-inside">
                 <li>Developed AI-driven audio processing software</li>
                 <li>Implemented testing frameworks</li>
