@@ -104,7 +104,7 @@ const Index = () => {
           >
             <div className="mx-auto w-40 h-40 rounded-full overflow-hidden border-4 border-purple-400/30 mb-6">
               <img
-                src="../public/profilepic.jpg"
+                src="/profilepic.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
