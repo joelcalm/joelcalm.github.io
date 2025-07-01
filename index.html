@@ -2,17 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- This is the line you were missing. -->
+    <!-- IMPORTANT: Change "your-favicon-filename.png" to the actual name of your icon file in the public folder -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    
+    <!-- Better title for search engines and browser tabs -->
+    <title>Joel Calm | AI & Data Science Portfolio</title>
+    
+    <!-- Better description for search engines -->
+    <meta name="description" content="Portfolio of Joel Calm, a Computational Mathematics and Data Analytics student specializing in Machine Learning, AI, and Data Science." />
+    <meta name="author" content="Joel Calm" />
+    
+    <!-- This is for social media link previews, you can keep or remove it -->
     <meta property="og:image" content="/og-image.png" />
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
