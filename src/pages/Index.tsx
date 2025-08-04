@@ -113,7 +113,7 @@ const Index = () => {
               Joel Calm
             </h1>
             <p className="text-xl md:text-2xl text-purple-200 max-w-2xl mx-auto">
-               Learning how to make machines understand and humans benefit
+               Perpetually in motion
             </p>
             <div className="flex justify-center space-x-6 pt-6">
               <a
