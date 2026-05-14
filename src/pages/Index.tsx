@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Github,
   Linkedin,
@@ -43,7 +43,7 @@ const Index = () => {
       title: "BrainRepo",
       description:
         "Developed an AI-powered web application that enhances learning retention from YouTube content by delivering personalized weekly recaps with key insights and lessons. Implemented a multi-agent system where specialized agents generate video summaries and create curated learning digests. Leveraged NLP and automated workflow orchestration to extract valuable takeaways from users' viewing history, transforming passive consumption into structured knowledge retention.",
-      link: "https://brainrepo.es",
+      link: "https://brainrepo.vercel.app",
       tech: ["AI", "NLP", "Automation", "Web App", "YouTube API"],
       date: "2024",
     },
@@ -65,15 +65,40 @@ const Index = () => {
     },
   ];
 
-  const skills = [
-    "Python",
-    "AI Agent",
+  const coreAreas = [
+    "Machine Learning",
+    "Data Science",
+    "AI Agents",
     "AI Automation",
     "API Integration",
+    "Predictive Modeling",
+    "Large Language Models",
+    "Retrieval-Augmented Generation",
+    "Multi-Agent Workflows",
+    "NLP",
+    "Computer Vision",
+    "Synthetic Data Generation",
+    "LLM Evaluation",
+  ];
+
+  const methodsTools = [
+    "Python",
     "Pandas",
     "Numpy",
     "Matplotlib",
     "Scikit-learn",
+    "XGBoost",
+    "Random Forest",
+    "SVM",
+    "Logistic Regression",
+    "Embeddings",
+    "Vector Search",
+    "Prompt Engineering",
+    "ETL Pipelines",
+    "REST APIs",
+    "Backend AI Services",
+    "Streamlit",
+    "Testing Frameworks",
     "Pytorch",
     "TensorFlow",
     "FastAPI",
@@ -84,12 +109,21 @@ const Index = () => {
     "Firebase",
     "AWS",
     "Docker",
+    "Kubernetes",
     "Git",
-  
+    "GitHub",
   ];
 
   const [showAllProjects, setShowAllProjects] = useState(false);
   const displayedProjects = showAllProjects ? projects : projects.slice(0, 4);
+  const [showAllCoreAreas, setShowAllCoreAreas] = useState(false);
+  const [showAllMethodsTools, setShowAllMethodsTools] = useState(false);
+  const coreAreasPreviewCount = 8;
+  const methodsToolsPreviewCount = 12;
+  const coreAreasPreview = coreAreas.slice(0, coreAreasPreviewCount);
+  const coreAreasExtra = coreAreas.slice(coreAreasPreviewCount);
+  const methodsToolsPreview = methodsTools.slice(0, methodsToolsPreviewCount);
+  const methodsToolsExtra = methodsTools.slice(methodsToolsPreviewCount);
 
   return (
     <div className="min-h-[80vh] bg-gradient-to-b from-black via-purple-900 to-black">
@@ -131,12 +165,6 @@ const Index = () => {
                 className="text-purple-200 hover:text-white transition-colors"
               >
                 <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:joelcalm44@gmail.com"
-                className="text-purple-200 hover:text-white transition-colors"
-              >
-                <Mail size={24} />
               </a>
             </div>
           </motion.div>
@@ -242,22 +270,62 @@ const Index = () => {
           <div className="space-y-8">
             <div className="glass rounded-lg p-6 bg-purple-900/30">
               <h3 className="text-xl font-semibold text-white">
-                Audio AI/ML Engineer Intern
+                Artificial Intelligence Intern
               </h3>
-              <p className="text-purple-200">AudioStack • Dec 2024 – May 2025</p>
+              <p className="text-purple-200">IIIA-CSIC • Mar 2026 – Present</p>
               <ul className="mt-4 text-purple-200 list-disc list-inside">
-                <li>Developed AI-driven audio processing software</li>
-                <li>Implemented testing frameworks</li>
+                <li>Study and evaluate ethical properties in large language models</li>
+                <li>Focus on measurable ethical behavior and model consistency</li>
               </ul>
             </div>
             <div className="glass rounded-lg p-6 bg-purple-900/30">
               <h3 className="text-xl font-semibold text-white">
                 Data Scientist
               </h3>
-              <p className="text-purple-200">Tavil • Aug 2023 – Aug 2024</p>
+              <p className="text-purple-200">Analytics 4 People • Aug 2025 – Present</p>
               <ul className="mt-4 text-purple-200 list-disc list-inside">
-                <li>Validated CNN models for image classification</li>
-                <li>Optimized model performance</li>
+                <li>Built predictive models for working hours and activity windows</li>
+                <li>Turned raw events into interpretable behavioral analytics</li>
+              </ul>
+            </div>
+            <div className="glass rounded-lg p-6 bg-purple-900/30">
+              <h3 className="text-xl font-semibold text-white">
+                AI / Data Science Intern
+              </h3>
+              <p className="text-purple-200">Electralith • Sep 2025 – Nov 2025</p>
+              <ul className="mt-4 text-purple-200 list-disc list-inside">
+                <li>Implemented AI solutions and advised on practical integration</li>
+                <li>Analyzed experimental data to identify ML opportunities</li>
+              </ul>
+            </div>
+            <div className="glass rounded-lg p-6 bg-purple-900/30">
+              <h3 className="text-xl font-semibold text-white">
+                Audio AI / ML Engineer Intern
+              </h3>
+              <p className="text-purple-200">Audiostack • Dec 2024 – May 2025</p>
+              <ul className="mt-4 text-purple-200 list-disc list-inside">
+                <li>Tuned TTS parameters to improve output consistency</li>
+                <li>Maintained testing frameworks for quality control</li>
+              </ul>
+            </div>
+            <div className="glass rounded-lg p-6 bg-purple-900/30">
+              <h3 className="text-xl font-semibold text-white">
+                Data Scientist Intern
+              </h3>
+              <p className="text-purple-200">TAVIL • Aug 2023 – Aug 2024</p>
+              <ul className="mt-4 text-purple-200 list-disc list-inside">
+                <li>Validated CNN models for image classification tasks</li>
+                <li>Improved model performance with tuning and feature work</li>
+              </ul>
+            </div>
+            <div className="glass rounded-lg p-6 bg-purple-900/30">
+              <h3 className="text-xl font-semibold text-white">
+                Private Maths and Physics Tutor
+              </h3>
+              <p className="text-purple-200">Independent • 2020 – 2023</p>
+              <ul className="mt-4 text-purple-200 list-disc list-inside">
+                <li>Delivered one-to-one tutoring in mathematics and physics</li>
+                <li>Adapted explanations to different learning levels</li>
               </ul>
             </div>
           </div>
@@ -276,19 +344,148 @@ const Index = () => {
             <GraduationCap className="text-purple-200" size={24} />
             <h2 className="text-3xl font-bold text-white">Skills</h2>
           </div>
-          <div className="flex flex-wrap gap-4">
-            {skills.map((skill, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30"
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
+          <motion.div layout className="space-y-6">
+            <motion.div layout className="space-y-4">
+              <h3 className="text-sm uppercase tracking-widest text-purple-300 mb-4">
+                Core Areas
+              </h3>
+              <motion.div layout className="flex flex-wrap gap-4">
+                {coreAreasPreview.map((skill, index) => (
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </motion.div>
+              {coreAreasExtra.length > 0 && !showAllCoreAreas && (
+                <motion.div layout="position" className="w-full flex mt-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowAllCoreAreas((prev) => !prev)}
+                    aria-expanded={showAllCoreAreas}
+                    aria-label={showAllCoreAreas ? "Show fewer core areas" : "Show more core areas"}
+                    className="inline-flex glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30 hover:bg-purple-900/50 transition-colors"
+                  >
+                    ...
+                  </button>
+                </motion.div>
+              )}
+              <AnimatePresence initial={false} mode="popLayout">
+                {showAllCoreAreas && coreAreasExtra.length > 0 && (
+                  <motion.div
+                    layout
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-wrap gap-4 pt-4">
+                      {coreAreasExtra.map((skill, index) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.25, delay: index * 0.05 }}
+                          className="glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30"
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              {coreAreasExtra.length > 0 && showAllCoreAreas && (
+                <motion.div layout="position" className="w-full flex mt-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowAllCoreAreas((prev) => !prev)}
+                    aria-expanded={showAllCoreAreas}
+                    aria-label={showAllCoreAreas ? "Show fewer core areas" : "Show more core areas"}
+                    className="inline-flex glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30 hover:bg-purple-900/50 transition-colors"
+                  >
+                    ...
+                  </button>
+                </motion.div>
+              )}
+            </motion.div>
+            <motion.div layout className="space-y-4">
+              <h3 className="text-sm uppercase tracking-widest text-purple-300 mb-4">
+                Methods & Tools
+              </h3>
+              <motion.div layout className="flex flex-wrap gap-4">
+                {methodsToolsPreview.map((skill, index) => (
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className="glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </motion.div>
+              {methodsToolsExtra.length > 0 && !showAllMethodsTools && (
+                <motion.div layout="position" className="w-full flex mt-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowAllMethodsTools((prev) => !prev)}
+                    aria-expanded={showAllMethodsTools}
+                    aria-label={showAllMethodsTools ? "Show fewer methods and tools" : "Show more methods and tools"}
+                    className="inline-flex glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30 hover:bg-purple-900/50 transition-colors"
+                  >
+                    ...
+                  </button>
+                </motion.div>
+              )}
+              <AnimatePresence initial={false} mode="popLayout">
+                {showAllMethodsTools && methodsToolsExtra.length > 0 && (
+                  <motion.div
+                    layout
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-wrap gap-4 pt-4">
+                      {methodsToolsExtra.map((skill, index) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.25, delay: index * 0.03 }}
+                          className="glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30"
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              {methodsToolsExtra.length > 0 && showAllMethodsTools && (
+                <motion.div layout="position" className="w-full flex mt-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowAllMethodsTools((prev) => !prev)}
+                    aria-expanded={showAllMethodsTools}
+                    aria-label={showAllMethodsTools ? "Show fewer methods and tools" : "Show more methods and tools"}
+                    className="inline-flex glass px-4 py-2 rounded-full text-purple-100 bg-purple-900/30 hover:bg-purple-900/50 transition-colors"
+                  >
+                    ...
+                  </button>
+                </motion.div>
+              )}
+            </motion.div>
+          </motion.div>
         </motion.div>
       </section>
 
